@@ -98,35 +98,23 @@ nav a.active {
 
 @media(max-width:995px) {
     nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    }
-
-    nav.active {
-        display: block;
+        position: static;
+        display: flex;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        border: 0;
+        background: transparent;
+        padding: 0;
     }
 
     nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-
-    }
-
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+        display: inline-block;
+        font-size: 1.6rem;
+        margin: 0;
     }
 }
 
@@ -311,7 +299,17 @@ span {
 @media(max-width:995px) {
     .home {
         flex-direction: column;
-        margin: 5rem 4rem;
+        margin: 2rem 1.6rem 4rem;
+        gap: 2.6rem;
+        text-align: center;
+    }
+
+    .home-content {
+        margin-top: 0;
+    }
+
+    .main {
+        margin-top: 1.2rem;
     }
 
     .home .home-content h3 {
@@ -323,8 +321,12 @@ span {
     }
 
     .home-img img {
-        width: 70vh;
-        margin-top: 4rem;
+        width: min(78vw, 36rem);
+        max-width: 100%;
+        margin-top: 0.8rem;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center 20%;
     }
 }
 
@@ -351,10 +353,6 @@ span {
 /* font-family: 'Courier New', Courier, monospace; */
 
 @media (max-width: 900px) {
-    nav {
-        margin-left: 20px;
-    }
-
     .logo {
         font-size: 3rem;
         margin-left: 0;
@@ -362,87 +360,58 @@ span {
 
     nav a {
         font-size: 1.5rem;
-        margin-left: 2rem;
     }
 
     .home-content h1 {
-        font-size: 4rem;
+        font-size: 4.2rem;
     }
 
     .home-content h3 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .home-img img {
-        width: 60vw;
-        margin-top: 2rem;
+        width: min(74vw, 33rem);
+        object-position: center 18%;
     }
 
-    .home {
-        flex-direction: column;
-        gap: 4rem;
+    .social-icons {
+        justify-content: center;
     }
 
     .social-icons a {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.5rem;
+        width: 3.6rem;
+        height: 3.6rem;
+        font-size: 1.7rem;
+        margin: 2rem 0.8rem 2rem 0;
     }
 
     .btn {
-        padding: 0.8rem 2rem;
-        font-size: 1.4rem;
+        padding: 0.9rem 2.2rem;
+        font-size: 1.45rem;
     }
 
     .typing-text {
-        font-size: 28px;
+        font-size: 2.8rem;
+        min-height: 7rem;
     }
 }
-@media (max-width: 900px) {
-    nav {
-        margin-left: 20px; /* Adjust margin for smaller screens */
-    }
 
-    .logo {
-        font-size: 3rem; /* Reduce logo size */
-        margin-left: 0; /* Center logo */
-    }
-
-    nav a {
-        font-size: 1.5rem; /* Adjust font size for nav links */
-        margin-left: 2rem; /* Reduce margin */
+@media (max-width: 600px) {
+    .home {
+        margin: 1rem 1.2rem 3rem;
     }
 
     .home-content h1 {
-        font-size: 4rem; /* Reduce heading size */
+        font-size: 3.6rem;
     }
 
     .home-content h3 {
-        font-size: 3rem; /* Adjust subheading size */
+        font-size: 2.3rem;
     }
 
     .home-img img {
-        width: 60vw; /* Adjust image size */
-        margin-top: 2rem; /* Add margin for spacing */
-    }
-
-    .home {
-        flex-direction: column; /* Stack items vertically */
-        gap: 4rem; /* Adjust gap */
-    }
-
-    .social-icons a {
-        width: 3rem; /* Adjust icon size */
-        height: 3rem; /* Adjust icon size */
-        font-size: 1.5rem; /* Adjust font size */
-    }
-
-    .btn {
-        padding: 0.8rem 2rem; /* Adjust button padding */
-        font-size: 1.4rem; /* Adjust button font size */
-    }
-
-    .typing-text {
-        font-size: 28px; /* Adjust typing text size */
+        width: min(84vw, 30rem);
+        object-position: center 16%;
     }
 }
